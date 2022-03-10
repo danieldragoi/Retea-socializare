@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plictisitdejavafx.MeniuController">
+   <children>
+      <VBox prefHeight="450.0" prefWidth="374.0">
+         <children>
+            <Label fx:id="label_username" alignment="CENTER" prefHeight="66.0" prefWidth="225.0" style="-fx-border-color: black;" text="utilizator@email.com">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNume" alignment="CENTER" prefHeight="28.0" prefWidth="230.0" style="-fx-border-color: red;" text="nume prenume">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonShowUsers" layoutX="10.0" layoutY="96.0" mnemonicParsing="false" onAction="#onButtonShowUsers" prefHeight="66.0" prefWidth="243.0" style="-fx-border-color: blue;" text="Users">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="buttonShowFriends" mnemonicParsing="false" onAction="#onButtonShowFriends" prefHeight="66.0" prefWidth="229.0" style="-fx-border-color: blue;" text="Prieteni">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button minHeight="-Infinity" mnemonicParsing="false" onAction="#onButtonShowFriendRequests" prefHeight="63.0" prefWidth="226.0" style="-fx-border-color: blue;" text="Cereri prietenie">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onButtonShowEvenimente" prefHeight="64.0" prefWidth="226.0" style="-fx-border-color: yellow;" text="Evenimente" textAlignment="RIGHT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <Label fx:id="labelNotificari" alignment="CENTER" contentDisplay="RIGHT" layoutY="50.0" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: yellow;" text="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onButtonShowMessages" prefHeight="64.0" prefWidth="225.0" style="-fx-border-color: green;" text="Mesaje">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#onButtonRapoarte" prefHeight="56.0" prefWidth="231.0" style="-fx-border-color: blue;" text="Rapoarte">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="497.0" prefWidth="582.0">
+         <children>
+            <HBox prefHeight="86.0" prefWidth="507.0">
+               <children>
+                  <VBox fx:id="buttonAddEveniment" prefHeight="86.0" prefWidth="198.0">
+                     <children>
+                        <Button fx:id="butonAddEveniment" alignment="CENTER" mnemonicParsing="false" onAction="#onButtonAddEveniment" prefHeight="47.0" prefWidth="179.0" text="Add eveniment" />
+                        <Label fx:id="labelTip" alignment="CENTER" prefHeight="42.0" prefWidth="169.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="29.0" prefWidth="89.0" text="Search:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldFilter" alignment="CENTER" onKeyTyped="#onFilterSearch" prefHeight="34.0" prefWidth="171.0" promptText="nume">
+                     <HBox.margin>
+                        <Insets right="10.0" top="23.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <ListView fx:id="listView" onMouseClicked="#onListViewPressed" prefHeight="402.0" prefWidth="433.0" />
+         </children>
+      </VBox>
+   </children>
+</HBox>
